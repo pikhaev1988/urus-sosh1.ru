@@ -5,8 +5,9 @@ from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 from urus_sosh1.models import *
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from urus_sosh1.form import register, zagruzka
+from urus_sosh1.form import register, MyImageForm
 from django.http import HttpResponse
+from django.shortcuts import render, redirect
 import csv
 import xlwt
 import requests
@@ -215,3 +216,13 @@ def download_data_uch(request, uch_id):
 
     workbook.save(response)
     return response
+#загрузка файлов
+def upload_image(request):
+    if request.method == 'POST':
+        form = MyImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('success')  # redirect to a success page
+    else:
+        form = MyImageForm()
+    return render(request, 'urus_sosh1/zagruzka_faylov.html', {'form': form})

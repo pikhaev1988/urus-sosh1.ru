@@ -16,7 +16,7 @@ urlpatterns = [
     path('export/<int:id>', views.expor_csv, name='expor_csv'),
     path('export_excel/<int:id>', views.export_excel, name='export_excel'),
     path('klassy', klass, name='klaas'),
-    path("zagruzka/", zagruzca_failov, name='zagruzca_failov'),
+
     path('klassy/<int:uch_id>/uchenic', views.uchenic, name='uchenic'),
     path('detal_uch/<int:pk>', views.detal_uch.as_view(), name='detal_uch'),
     path('export_excel_uch/<int:id>', views.export_excel_uch, name='export_excel_uch'),
