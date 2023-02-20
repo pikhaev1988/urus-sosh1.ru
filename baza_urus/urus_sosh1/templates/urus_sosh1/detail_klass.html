@@ -1,0 +1,47 @@
+{% extends 'urus_sosh1/index.html' %}
+{% block wer %}
+    <div>
+        {% for ir in klas %}
+            <h1 style="color: #390707">{{ ir.klass }} Класс</h1>
+        {% endfor %}
+    </div>
+    <div style="display: flex; justify-content: left">
+
+        <div>
+            {% for ir in klas %}
+                <img src="{{ ir.foto.url }}" width="450" height="300">
+
+            {% endfor %}
+
+            <table>
+                <tr>
+                <tr>
+                    <td><button style="width: 150px; background-color: #1971b0; border: none; border-radius: 7px; padding: 2px"><a style="text-decoration: none; color: white; font-size: 20px" href="">назад</a> </button></td>
+
+                        <td style="padding-left: 30px"><button style="width: 200px; background-color: #1971b0; border: none; border-radius: 7px; padding: 2px"><a style="text-decoration: none; color: white; font-size: 20px" href="{% url 'download_data_uch' klas %}">скачать данные</a> </button></td>
+
+                </tr>
+                </tr>
+            </table>
+        </div>
+        <div style="padding-left: 20px">
+
+            <table border="0">
+                <tbody>
+                {% for i in qwe %}
+                    <tr>
+
+                        <td><a style="font-weight: 700; text-decoration: none; color: coral" href="{% url 'detal_uch' i.pk %}"> {{ i.fio }}</a></td>
+                        <td style="font-weight: 700; color: darkgreen">{{ i.data }}</td>
+
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+{% endblock %}
+

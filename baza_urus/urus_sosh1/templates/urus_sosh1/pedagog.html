@@ -1,0 +1,34 @@
+
+{% extends 'urus_sosh1/index.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+{% block wer %}
+
+<div class="ped">
+        <table class="table_1">
+            <thead>
+            <tr>
+                <th>№ п/п</th>
+                <th>ФИО</th>
+                <th>Дата</th>
+                <th>Должность</th>
+                <th>Изменить</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for ped_1 in ped %}
+                <tr>
+                    <td>{{ ped_1.pk }}</td>
+                    <td><a class="a_1" href="{% url 'Detail' ped_1.pk %}">{{ ped_1.fio }}</a> </td>
+                    <td>{{ ped_1.data_roj }}</td>
+                    <td>{{ ped_1.doljnost }}</td>
+                    <td><button style="background-color: cornflowerblue; border: none"><a style="text-decoration: none; color: white" href="{% url 'Update' ped_1.pk %}">Изменить</a></button></td>
+                </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+
+</div>
+<a href="{% url 'download_data' cat.pk %}"> скачать</a>
+{% endblock %}

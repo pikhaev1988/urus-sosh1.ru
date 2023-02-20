@@ -1,0 +1,13 @@
+{% extends 'urus_sosh1/index.html' %}
+{% block wer %}
+    <div>
+        {% for i in doc %}
+            <table>
+            <tr>
+                <td>{{ i.mane }}</td>
+                <td><a href="{{ i.docs.url }}" download="">скачать</a></td>
+            </tr>
+            </table>
+        {% endfor %}
+    </div>
+{% endblock %}

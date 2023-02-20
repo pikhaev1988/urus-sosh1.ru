@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+{% include 'urus_sosh1/nav_1.html' %}
+<div style="width: 70%; margin: auto; padding-top: 30px">
+    <div style="height: 100px; background: deepskyblue; border-radius: 20px 10px 0 0; padding-top: 60px;"><p style="padding-left: 20px; font: small-caps bold 24px/1 sans-serif;color: white;">Вход ЭБД МБОУ "СОШ №1 г.Урус-Мартан</p></div>
+    <div style="display: flex; justify-content: left">
+    <div style="height: 330px; width: 500px; padding-top: 30px; background-color: azure;">
+        {% load crispy_forms_tags %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <div style="padding-top: 15px">
+            <button style="border: none; border-radius: 5px; width: 200px; padding: 10px; background: #87cc2d; color: white" type="submit">Вход</button>
+                </div>
+        </form>
+    </div>
+    <div style=" text-align: center; background-color: azure; width: 60%; font-size: 17px;font-weight: 600;">
+        <p style="padding-top: 50px">Чеченская Республика</p>
+
+        <p style="margin: 0">Муниципальное бюджетное </p>
+        <p style="margin: 0">общеобразовательное учреждение</p>
+        <p style="margin: 0">"Средняя общеобразовательная школа №1 </p>
+        <p style="margin: 0">г.Урус-Мартан"</p>
+    </div>
+        </div>
+    <div style="font-size: 17px; height: 70px; background: burlywood; border-radius: 0 0 20px 10px; padding-top: 15px"><p style="padding-left: 30px">Забыли логин или пароль? <a style="text-decoration: none" href=""> Восстановите доступ.</a></p></div>
+</div>
+
+<br><br>
+</body>
+</html>

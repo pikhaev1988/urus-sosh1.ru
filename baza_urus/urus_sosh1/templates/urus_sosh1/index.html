@@ -1,0 +1,119 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+    <link rel="stylesheet" href="{% static 'css/wer.css' %}">
+    <title>Document</title>
+
+</head>
+<body>
+
+{% include 'urus_sosh1/nav.html' %}
+<div class="grid">
+
+
+
+
+
+    <div>
+        <div class="widget">
+            <h3>Категории</h3>
+            <ul>
+                <li><a href="{% url 'don' %}"> Директор</a></li>
+                <li><a href="{% url 'ikt' %}">зам. дир по ИКТ</a></li>
+                <li><a href="">зам. дир по УР</a></li>
+                <li><a href="">зам. дир по ВР</a></li>
+                <li><a href="">зам. дир по НУВР</a></li>
+                <li><a href="">зам. дир по МР</a></li>
+                <li><a href="">зам. дир по АХЧ</a></li>
+                <li><a href="{% url 'sekretar' %}">Секратарь</a></li>
+                <li><a href="">Соц. педагог</a></li>
+                <li><a href="">Психолог</a></li>
+                <li><button style="border-style: none; background-color: slategray; border-radius: 5px; padding: 10px; width: 200px"><a href="{% url 'zagruzca_failov' %}" style="color: white">Загрузить документ</a></button></li>
+            </ul>
+        </div>
+
+        <div class="nij_menu">
+            <ul class="metro">
+                <li><a href="{% url 'recvizit' %}">Реквизиты школы</a>
+                    <ul>
+                        <li><a href="">Приказы по учителям</a></li>
+                        <li><a href="">Приказы по учащимся</a></li>
+                        <li><a href="">Приказы по тех.перс</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Списки учащихся</a></li>
+                <li><a href="">Списки по классом</a></li>
+            </ul>
+        </div>
+
+
+
+
+<div class="wer">
+
+</div>
+
+
+
+
+    </div>
+    <div class="center">
+        <div class="port">
+            <table>
+                <tbody>
+                <tr>
+                    <td width="150"><button style="width: 150px; border: none; border-radius: 20px 2px 20px 2px; background-color: rgb(201,53,8)"><a style="text-decoration: none; color: azure" href="">пр. по учителям</a> </button></td>
+                    <td width="150"><button style="width: 150px; border: none; border-radius: 20px 2px 20px 2px; background-color: #c93508"><a style="text-decoration: none; color: azure" href="">пр. по учащимся</a> </button></td>
+                    <td width="150"><button style="width: 150px; border: none; border-radius: 20px 2px 20px 2px; background-color: #c93508"><a style="text-decoration: none; color: azure" href="">пр. по тех.пер</a> </button></td>
+                    <td width="150"><button style="width: 150px; border: none; border-radius: 20px 2px 20px 2px; background-color: #c93508"><a style="text-decoration: none; color: azure" href="">пр. по классам</a> </button></td>
+                    <td width="150"><button style="width: 150px; border: none; border-radius: 20px 2px 20px 2px; background-color: #c93508"><a style="text-decoration: none; color: azure" href="">положении</a> </button></td>
+                    <td width="150"><button style="width: 150px; border: none; border-radius: 20px 2px 20px 2px; background-color: #c93508"><a style="text-decoration: none; color: azure" href="">локальные акты</a> </button></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dir_1">
+            <div class="dir">
+                <img src="">
+            </div>
+        </div>
+        <dev class="object-tools">
+            {% block wer %}
+                <div class="grid_1">
+                    <div class="content_1">
+
+
+                    </div>
+
+
+                    <div class="content_2">
+                        <div class="dir">
+                            <img src="/media/madia/дир.jpg" width="180" height="200">
+                        </div>
+                        <div class="tex">
+                            <p>Директор МБОУ "СОШ №1 г.Урус-Мартан"</p>
+                            <p>Ахмадова Б.Х.</p>
+                        </div>
+                    </div>
+
+                </div>
+            {% endblock %}
+        </dev>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>

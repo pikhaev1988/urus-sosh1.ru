@@ -1,0 +1,125 @@
+{% extends 'urus_sosh1/index.html' %}
+{% include 'urus_sosh1/nav.html' %}
+{% block wer %}
+    <div style="display: flex; justify-content: left">
+    <div>
+        <img class="photo" src="{{ pedagog.photo.url }}" width="300" height="250">
+    </div>
+    <div class="deteyl_tab" style="padding-left: 10px">
+    <table border="0" class="table_1">
+            <tr>
+                <td scope="col">ФИО:</td>
+                <td class="tab">{{ pedagog.fio }}</td>
+            </tr>
+            <tr>
+
+                <td class="tr_1">Дата:</td>
+                <td >{{ pedagog.data_roj }}</td>
+            </tr>
+            <tr>
+
+                <td>Адрес:</td>
+                <td>{{ pedagog.adres }}</td>
+            </tr>
+            <tr>
+
+                <td>СНИЛС:</td>
+                <td>{{ pedagog.snils }}</td>
+            </tr>
+            <tr>
+
+                <td>Телефон:</td>
+                <td>{{ pedagog.telefon }}</td>
+            </tr>
+            <tr>
+
+                <td>Email:</td>
+                <td>{{ pedagog.email }}</td>
+            </tr>
+            <tr>
+
+                <td>Серия паспорта:</td>
+                <td>{{ pedagog.ser_pas }}</td>
+            </tr>
+            <tr>
+
+                <td>Номер паспорта:</td>
+                <td>{{ pedagog.nom_pas }}</td>
+            </tr>
+            <tr>
+
+                <td>Место работы:</td>
+                <td>{{ pedagog.mesto_rab }}</td>
+            </tr>
+            <tr>
+
+                <td>Общий стаж:</td>
+                <td>{{ pedagog.staj }}</td>
+            </tr>
+            <tr>
+
+                <td>Пед. Стаж:</td>
+                <td>{{ pedagog.ped_staj }}</td>
+            </tr>
+            <tr>
+
+                <td>Категория:</td>
+                <td>{{ pedagog.kate_gor }}</td>
+            </tr>
+            <tr>
+
+                <td>Должность:</td>
+                <td>{{ pedagog.doljnost }}</td>
+            </tr>
+            <tr>
+
+                <td>ВО СПО Учебное заведения:</td>
+                <td>{{ pedagog.uch_zav }}</td>
+            </tr>
+            <tr>
+
+                <td>Спец по диплому:</td>
+                <td>{{ pedagog.spec_po_dip }}</td>
+            </tr>
+            <tr>
+
+                <td>Сроки обучения:</td>
+                <td>{{ pedagog.sroc_ob }}</td>
+            </tr>
+            <tr>
+
+                <td>Серия диплома:</td>
+                <td>{{ pedagog.ser_dip }}</td>
+            </tr>
+            <tr>
+
+                <td>Номер диплота:</td>
+                <td>{{ pedagog.nom_dip }}</td>
+            </tr>
+            <tr>
+
+                <td>КПК (год прохождения последних КПК):</td>
+                <td>{{ pedagog.kpk_god_proh }}</td>
+            </tr>
+            <tr>
+
+                <td>Место обучения и тема КПК:</td>
+                <td>{{ pedagog.mesto_ob }}</td>
+            </tr>
+
+    </table>
+        </div>
+            </div>
+    <div class="button_1">
+        <button class="button_2" ><a href="{% url 'pedagog' pedagog.cet_id %}">Назад</a></button>
+
+    </div>
+    <a href="{% url 'expor_csv' pedagog.pk %}">Скачать</a>
+    </div>
+    </div>
+    <a href="{% url 'export_excel' pedagog.pk%}">Скачать excel</a>
+    </div>
+
+{% endblock %}
+
+

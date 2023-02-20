@@ -1,0 +1,72 @@
+{% extends 'urus_sosh1/index.html' %}
+{% block wer %}
+    <div style="font-size: 40px; font-weight: 700;">Карточка ученика</div>
+    <div style="display: flex; justify-content: left; padding-top: 20px">
+
+        <div>
+            <img src="{{ ucheniki.foto.url }}" width="300">
+        </div>
+        <div style="background-color: #f0ffff">
+            <div style="padding-left: 30px">
+
+                <table  border="0">
+                    <tbody>
+                    <tr>
+                        <th>ФИО</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.fio }}</td>
+                    </tr>
+                    <tr>
+                        <th>Дата роджения</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.data }}</td>
+                    </tr>
+                    <tr>
+                        <th>СНИЛС</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.snils }}</td>
+                    </tr>
+                    <tr>
+                        <th>Адрес</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.adres }}</td>
+                    </tr>
+                    <tr>
+                        <th>ФИО Матери</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.fio_mat }}</td>
+                    </tr>
+                    <tr>
+                        <th>Телефон матери</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.tel_mat }}</td>
+                    </tr>
+                    <tr>
+                        <th>Место работы</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.mesto_rab_mat }}</td>
+                    </tr>
+                    <tr>
+                        <th>ФИО Отца</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.fio_ot }}</td>
+                    </tr>
+                    <tr>
+                        <th>Телефон отца</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.tel_ot }}</td>
+                    </tr>
+                    <tr>
+                        <th>Место работы</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.mesto_rab_ot }}</td>
+                    </tr>
+                    <tr>
+                        <th>Социальный статус</th>
+                        <td style="padding-left: 20px; color: indianred;">{{ ucheniki.status }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <tr>
+                        <td><button style="width: 150px; background-color: #1971b0; border: none; border-radius: 7px; padding: 4px"><a style="text-decoration: none; color: white; font-size: 20px" href="{% url 'uchenic' ucheniki.uch_id %}">НАЗАД</a> </button></td>
+                        <td style="padding-left: 30px"><button style="width: 200px; background-color: #1971b0; border: none; border-radius: 7px; padding: 4px"><a style="text-decoration: none; color: white; font-size: 20px" href="{% url 'export_excel_uch' ucheniki.pk %}">СКАЧАТЬ ДАННЫЕ</a> </button></td>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

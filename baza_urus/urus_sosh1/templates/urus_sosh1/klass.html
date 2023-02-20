@@ -1,0 +1,19 @@
+{% extends 'urus_sosh1/index.html' %}
+{% include 'urus_sosh1/nav.html' %}
+{% block wer %}
+    <div class="container">
+    <div class="row">
+        {% for i in wer %}
+            <div class="card" style="width: 18rem; display: flex;">
+                <img src="{{ i.foto.url }}" class="card-img-top" width="250" height="200">
+                <div class="card-body">
+                    <h5 class="card-title">{{ i.klass }} Класс</h5>
+                    <p class="card-text">В классе {{ i.opis_klass }} учеников</p>
+                    <a href="{% url 'uchenic' i.pk %}" class="btn btn-primary">Кл. рук {{ i.klass_ruk }}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}
