@@ -71,9 +71,9 @@ class cat_uch(models.Model):
         return self.klass
 
 class doc(models.Model):
-    mane = models.CharField(max_length=100, verbose_name='имя')
-    docs = models.FileField(upload_to='doks/')
-    admini  = models.ForeignKey('adminis', on_delete=models.CASCADE, null=True, verbose_name='Группа')
+    mane = models.CharField(max_length=100, verbose_name='Имя файла')
+    docs = models.FileField(upload_to='doks/', verbose_name='Файл')
+    admini  = models.ForeignKey('adminis', on_delete=models.CASCADE, null=True, verbose_name='Документ для')
 
     def __str__(self):
         return self.mane

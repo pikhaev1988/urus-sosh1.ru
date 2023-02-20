@@ -1,3 +1,4 @@
+from django.contrib.messages import success
 from django.urls import path
 from urus_sosh1.views import *
 from urus_sosh1 import views
@@ -16,7 +17,7 @@ urlpatterns = [
     path('export/<int:id>', views.expor_csv, name='expor_csv'),
     path('export_excel/<int:id>', views.export_excel, name='export_excel'),
     path('klassy', klass, name='klaas'),
-
+    path('zag/', upload_fail, name='upload_fail'),
     path('klassy/<int:uch_id>/uchenic', views.uchenic, name='uchenic'),
     path('detal_uch/<int:pk>', views.detal_uch.as_view(), name='detal_uch'),
     path('export_excel_uch/<int:id>', views.export_excel_uch, name='export_excel_uch'),
@@ -31,4 +32,5 @@ urlpatterns = [
     path('don',donwlood, name='don'),
 #адреса документов
     path('recvizit/', recvizit, name='recvizit'),
+    path('success/', success, name='success'),
 ]

@@ -217,12 +217,13 @@ def download_data_uch(request, uch_id):
     workbook.save(response)
     return response
 #загрузка файлов
-def upload_image(request):
+def upload_fail(request):
     if request.method == 'POST':
         form = MyImageForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('success')  # redirect to a success page
+            form=MyImageForm
+            redirect(reverse('success'))  # redirect to a success page
     else:
         form = MyImageForm()
     return render(request, 'urus_sosh1/zagruzka_faylov.html', {'form': form})
