@@ -9,7 +9,7 @@ from django.contrib.auth import views as wer
 urlpatterns = [
 
     path('',wer.LoginView.as_view(template_name = 'urus_sosh1/register/login.html'), name='login'),
-    path('logaut/',wer.LogoutView.as_view(template_name = 'urus_sosh1/register/login.html'), name='logaut'),
+    path('',wer.LogoutView.as_view(template_name = 'urus_sosh1/register/login.html'), name='logaut'),
     path("index/", index, name='index'),
     path('register/', views.regist.as_view(), name='register'),
     path('Detail/<int:pk>', views.Detail.as_view(), name='Detail'),
