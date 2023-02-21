@@ -29,6 +29,13 @@ urlpatterns = [
     path('ikt/', ikt, name='ikt'),
     path('sekretar/', sekretar, name='sekretar'),
     path('director/', director, name='director'),
+    path('psiholog/', psiholog, name='psiholog'),
+    path('soc_ped/', soc_ped, name='soc_ped'),
+    path('zav_mr/', zav_mr, name='zav_mr'),
+    path('zav_ahch/', zav_ahch, name='zav_ahch'),
+    path('zav_vr/', zav_vr, name='zav_vr'),
+    path('zav_vr_nach/', zav_vr_nach, name='zav_vr_nach'),
+    path('zav_yvr/', zav_yvr, name='zav_yvr'),
     path('don',donwlood, name='don'),
 #адреса документов
     path('recvizit/', recvizit, name='recvizit'),

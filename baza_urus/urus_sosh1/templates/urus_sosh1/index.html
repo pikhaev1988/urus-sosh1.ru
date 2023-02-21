@@ -28,14 +28,14 @@
             <ul>
                 <li><a href="{% url 'don' %}"> Директор</a></li>
                 <li><a href="{% url 'ikt' %}">зам. дир по ИКТ</a></li>
-                <li><a href="">зам. дир по УР</a></li>
-                <li><a href="">зам. дир по ВР</a></li>
-                <li><a href="">зам. дир по НУВР</a></li>
-                <li><a href="">зам. дир по МР</a></li>
-                <li><a href="">зам. дир по АХЧ</a></li>
+                <li><a href="{% url 'zav_yvr' %}">зам. дир по УР</a></li>
+                <li><a href="{% url 'zav_vr' %}">зам. дир по ВР</a></li>
+                <li><a href="{% url 'zav_vr_nach' %}">зам. дир по УР НАЧ</a></li>
+                <li><a href="{% url 'zav_mr' %}">зам. дир по МР</a></li>
+                <li><a href="{% url 'zav_ahch' %}">зам. дир по АХЧ</a></li>
                 <li><a href="{% url 'sekretar' %}">Секратарь</a></li>
-                <li><a href="">Соц. педагог</a></li>
-                <li><a href="">Психолог</a></li>
+                <li><a href="{% url 'soc_ped' %}">Соц. педагог</a></li>
+                <li><a href="{% url 'psiholog' %}">Психолог</a></li>
                 <li><button style="border-style: none; background-color: slategray; border-radius: 5px; padding: 10px; width: 200px"><a href="{% url 'upload_fail' %}" style="color: white">Загрузить документ</a></button></li>
             </ul>
         </div>

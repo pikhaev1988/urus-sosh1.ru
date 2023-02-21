@@ -178,16 +178,39 @@ def export_excel_klass(request, uch_id):
 
 
 def donwlood(req):
-    docs = doc.objects.filter(admini_id=1)
+    docs = doc.objects.filter(admini_id=4)
     return render(req, 'urus_sosh1/administraciy/direktor.html', {"doc":docs})
 
 def ikt(req):
-    docs = doc.objects.filter(admini_id=2)
+    docs = doc.objects.filter(admini_id=3)
     return render(req, 'urus_sosh1/administraciy/ikt.html', {"doc":docs})
 
 def sekretar(req):
-    docs = doc.objects.filter(admini_id=4)
+    docs = doc.objects.filter(admini_id=8)
     return render(req, 'urus_sosh1/administraciy/sekretar.html', {"doc":docs})
+
+def psiholog(req):
+    docs = doc.objects.filter(admini_id=9)
+    return render(req, 'urus_sosh1/administraciy/psih.html', {"doc":docs})
+def soc_ped(req):
+    docs = doc.objects.filter(admini_id=7)
+    return render(req, 'urus_sosh1/administraciy/soc_ped.html', {"doc":docs})
+def zav_mr(req):
+    docs = doc.objects.filter(admini_id=5)
+    return render(req, 'urus_sosh1/administraciy/vaz_mr.html', {"doc":docs})
+def zav_ahch(req):
+    docs = doc.objects.filter(admini_id=6)
+    return render(req, 'urus_sosh1/administraciy/zav_ahch.html', {"doc":docs})
+def zav_vr(req):
+    docs = doc.objects.filter(admini_id=2)
+    return render(req, 'urus_sosh1/administraciy/zav_vr.html', {"doc":docs})
+def zav_vr_nach(req):
+    docs = doc.objects.filter(admini_id=1)
+    return render(req, 'urus_sosh1/administraciy/zav_vr_nach.html', {"doc":docs})
+def zav_yvr(req):
+    docs = doc.objects.filter(admini_id=10)
+    return render(req, 'urus_sosh1/administraciy/zav_yvr.html', {"doc":docs})
+
 
 def download_data_ped(request, cet_id):
     queryset = Pedagog.objects.filter(cet_id=cet_id)
