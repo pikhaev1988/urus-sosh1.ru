@@ -106,19 +106,17 @@
                 <td>Место обучения и тема КПК:</td>
                 <td>{{ pedagog.mesto_ob }}</td>
             </tr>
+            <tr>
+                <td><button style="border: none; width: 200px; background-color: cornflowerblue; border-radius: 5px; padding: 7px"><a style="text-decoration: none; color: white" href="{% url 'pedagog' pedagog.cet_id %}">Назад</a></button></td>
+                <td><button style="border: none; width: 200px; background-color: cornflowerblue; border-radius: 5px; padding: 7px"> <a style="text-decoration: none; color: white" href="{% url 'export_excel' pedagog.pk%}">Скачать excel</a></button></td>
+            </tr>
 
     </table>
         </div>
             </div>
-    <div class="button_1">
-        <button class="button_2" ><a href="{% url 'pedagog' pedagog.cet_id %}">Назад</a></button>
 
-    </div>
-    <a href="{% url 'expor_csv' pedagog.pk %}">Скачать</a>
-    </div>
-    </div>
-    <a href="{% url 'export_excel' pedagog.pk%}">Скачать excel</a>
-    </div>
+
+
 
 {% endblock %}
 
