@@ -14,6 +14,7 @@ import requests
 from bs4 import BeautifulSoup
 import mysql.connector
 import json
+from Tools.scripts.parse_html5_entities import create_dict
 
 class regist(CreateView):
     form_class = register
